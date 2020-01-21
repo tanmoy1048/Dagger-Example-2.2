@@ -16,7 +16,7 @@ public class MainActivityViewModel extends ViewModel {
 
     @Inject
     public MainActivityViewModel(Date drawable, Calendar calendar) {
-        Log.d("zzzzzz", "auth viewmodel is working" + (drawable != null) + (calendar != null));
+        Log.d("zzzzzz", "main activity viewmodel is working" + (drawable != null) + (calendar != null));
     }
 
 }
