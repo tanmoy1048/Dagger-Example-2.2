@@ -1,10 +1,12 @@
-package com.datagene.daggerexample22;
+package com.datagene.daggerexample22.ui;
 
 
 import android.os.Bundle;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import com.datagene.daggerexample22.R;
+import com.datagene.daggerexample22.ui.fragment.ProfileFragment;
 import com.datagene.daggerexample22.viewmodels.ViewModelProviderFactory;
 
 import javax.inject.Inject;
@@ -22,5 +24,6 @@ public class MainActivity extends DaggerAppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MainActivityViewModel viewModel = ViewModelProviders.of(this, providerFactory).get(MainActivityViewModel.class);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, new ProfileFragment()).commit();
     }
 }

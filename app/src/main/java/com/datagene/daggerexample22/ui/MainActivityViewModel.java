@@ -1,4 +1,4 @@
-package com.datagene.daggerexample22;
+package com.datagene.daggerexample22.ui;
 
 import android.util.Log;
 
