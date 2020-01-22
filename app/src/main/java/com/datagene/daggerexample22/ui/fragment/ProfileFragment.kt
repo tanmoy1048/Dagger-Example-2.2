@@ -14,9 +14,9 @@ import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
 class ProfileFragment : DaggerFragment() {
-    @JvmField
+
     @Inject
-    var providerFactory: ViewModelProviderFactory? = null
+    lateinit var providerFactory: ViewModelProviderFactory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)

@@ -8,9 +8,9 @@ import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
 class AnotherActivity : DaggerAppCompatActivity() {
-    @JvmField
+
     @Inject
-    var providerFactory: ViewModelProviderFactory? = null
+    lateinit var providerFactory: ViewModelProviderFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
