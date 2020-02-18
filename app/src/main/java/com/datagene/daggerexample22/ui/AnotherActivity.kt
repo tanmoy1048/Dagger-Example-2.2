@@ -14,7 +14,7 @@ class AnotherActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_main)
+        setContentView(R.layout.activity_second)
         val viewModel = ViewModelProviders.of(this, providerFactory).get(AnotherActivityViewModel::class.java)
     }
 }

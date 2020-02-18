@@ -5,10 +5,15 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Screenshot")
-data class Screenshot(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
-    val id: Int,
-    @ColumnInfo(name = "url")
-    val url: String
-)
+class Screenshot(
+        @ColumnInfo(name = "url")
+        val url: String,
+        @ColumnInfo(name = "imageLocation")
+        val imageLocation: String,
+        @ColumnInfo(name = "timeStamp")
+        val timeStamp: Long
+){
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "id")
+        var id: Int?=null
+}
