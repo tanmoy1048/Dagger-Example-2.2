@@ -1,5 +1,6 @@
 package com.datagene.daggerexample22.ui
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
@@ -58,6 +59,10 @@ class MainActivity : DaggerAppCompatActivity() {
             if(progressBar.visibility==View.INVISIBLE && !TextUtils.isEmpty(urlEditText.text.toString())){
                 viewModel.saveScreenshot(getBitmapOfWebView(), urlEditText.text.toString())
             }
+        }
+
+        historyButton.setOnClickListener {
+            startActivity(Intent(this, AnotherActivity::class.java))
         }
 
         subscribeUI()

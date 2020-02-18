@@ -7,8 +7,8 @@ import com.datagene.daggerexample22.data.model.Screenshot
 
 @Dao
 interface LocalDao {
-    @Query("SELECT * FROM Screenshot")
-    fun getScreenshot(): LiveData<Screenshot>
+    @Query("SELECT * FROM Screenshot WHERE url LIKE '%' ||:queryString|| '%'")
+    fun getScreenshot(queryString:String): LiveData<List<Screenshot>>
 
     @Insert
     suspend fun insertScreenshot(screenshot: Screenshot)
